@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title> Game X | O </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+
+
+<body class="body">
+
+    <div style="text-align: center;position: absolute;top: 350px;left: 50%;margin-left: -50px;">
+        <button class="start" onclick="startplay()" id="butstart">START</button>
+    </div>
+
+    <div style="position:absolute;left:0px;background-color:rgba(0, 0, 0, 0.5);width:400px;height:100vh;display: none;"
+        id="p1">
+        <div class="game" style="text-align: center;">
+            <input type="text" id="playerone" placeholder="Player One ..." /><br>
+            <button class="but">Enter</button>
+            <p class="erro"></p>
+        </div>
+
+
+        <div>
+            <h3 id="play-now"> Play Now <i class="las la-angle-double-right" style="color: rgb(169, 12, 12);"></i></h3>
+        </div>
+
+        <div class="name">
+        </div>
+    </div>
+
+
+
+    <div style="position:absolute;right:0px; background-color:rgba(0, 0, 0, 0.5);width:400px;height:100vh;display: none;"
+        id="p2">
+        <div class="game2" style="text-align: center;">
+            <input type="text" id="playertwo" placeholder="Player Two ..." /><br>
+            <button class="but2" disabled>Enter</button>
+            <p class="erro2"></p>
+        </div>
+
+        <div>
+            <h3 id="play-now2"><i class="las la-angle-double-left" style="color: rgb(169, 12, 12);"></i> Play Now </h3>
+        </div>
+
+        <div class="name2">
+        </div>
+    </div>
+
+
+
+    <div class="title"><span > X - O </span><br>GAME</div>
+    <div id="x-o">
+        <span style="width: 0px;position: absolute;left: -10px;top:0px;background-color: gold;height: 3px;"
+            class="top"></span>
+        <span style="width: 3px;position: absolute;top: -10px;background-color: gold;height: 0px;" class="right"></span>
+        <span style="width: 3px;position: absolute;bottom: -10px;right:0px;background-color: gold;height: 0px;"
+            class="left"></span>
+        <span style="width: 0px;position: absolute;bottom: 0px;right: -10px;background-color: gold;height: 3px;"
+            class="bottom"></span>
+
+        <div class="gameid">
+
+            <div class="square" id="item1" onclick="gameid(this.id)"></div>
+            <div class="square" id="item2" onclick="gameid(this.id)"></div>
+            <div class="square" id="item3" onclick="gameid(this.id)"></div>
+
+            <div class="square" id="item4" onclick="gameid(this.id)"></div>
+            <div class="square" id="item5" onclick="gameid(this.id)"></div>
+            <div class="square" id="item6" onclick="gameid(this.id)"></div>
+
+            <div class="square" id="item7" onclick="gameid(this.id)"></div>
+            <div class="square" id="item8" onclick="gameid(this.id)"></div>
+            <div class="square" id="item9" onclick="gameid(this.id)"></div>
+            <p id="win" style="color: transparent;visibility:hidden;text-transform: capitalize;"></p>
+
+        </div>
+        <div>
+        </div>
+    </div>
+
+    <script src="./query.js"></script>
+    <script src="./logic.js"></script>
+
+</body>
+
+</html
