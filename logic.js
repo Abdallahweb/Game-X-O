@@ -35,7 +35,7 @@ let turn = "X",
 
 function end(e, s, a) {
   new Audio('./win.mp3').play();
-  title.innerHTML = `<h4 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#ff0000, #fdcf58) text;'>${win.innerHTML}</h4>The Winner`, document.getElementById("item" + e).style.color = "red", document.getElementById("item" + s).style.color = "red", document.getElementById("item" + a).style.color = "red", $("#p1").slideUp(), $("#p2").slideUp(), $("#p1").addClass("hidename"), $("#p2").addClass("hidename2"), setTimeout(function() {
+  title.innerHTML = `<h4 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#ff0000, #fdcf58) text;'><img src="./win.png" style="width:50px;height:50px">${win.innerHTML}</h4>`, document.getElementById("item" + e).style.color = "red", document.getElementById("item" + s).style.color = "red", document.getElementById("item" + a).style.color = "red", $("#p1").slideUp(), $("#p2").slideUp(), $("#p1").addClass("hidename"), $("#p2").addClass("hidename2"), setTimeout(function() {
     location.reload()
   }, 2e3)
 }
