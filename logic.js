@@ -74,7 +74,7 @@ let turn = "X",
 
 function end(e, s, a) {
   new Audio("./win.mp3").play();
-  ((title.innerHTML = `<h4 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#ff0000, #fdcf58) text;'><img src="./win.png" style="width:30px;height:30px">${win.innerHTML}</h4>`),
+  ((title.innerHTML = `<div class="winnerDiv"><h1 id="winner">The Winner<span class="winnerName">${win.innerHTML}</span></h1></div>`),
     (document.getElementById("item" + e).style.color = "red"),
     (document.getElementById("item" + s).style.color = "red"),
     (document.getElementById("item" + a).style.color = "red"),
