@@ -15,7 +15,7 @@ $(document).ready(function () {
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
-          "<img src='./player.png' style='width:90px;height:90px;'>  <h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,rgba(190, 7, 7, 0.8), silver) text;'>PLAYER ONE (X)</h2>" +
+          "<img src='./player.png' style='width:100px;height:110px;'>  <h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,rgba(190, 7, 7, 0.8), silver) text;'>PLAYER ONE (X)</h2>" +
             newplayer.val().toUpperCase(),
         ),
         $(".but2").removeAttr("disabled"));
@@ -32,7 +32,7 @@ $(document).ready(function () {
         $(".name2").addClass("pos2"),
         $(document.body).addClass("back"),
         $(".name2").html(
-          "<img src='./player.png' style='width:90px;height:90px'><h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,rgb(27, 32, 139), silver) text;'>PLAYER TWO (O)</h2>" +
+          "<img src='./player2.png' style='width:110px;height:110px'><h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,rgb(27, 32, 139), silver) text;'>PLAYER TWO (O)</h2>" +
             newplayer2.val().toUpperCase(),
         ),
         $("#play-now").slideDown(500),
