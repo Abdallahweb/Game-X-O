@@ -11,11 +11,11 @@ var newplayer = $("#playerone");
 $(document).ready(function () {
   $(".but").click(function () {
     "" == newplayer.val()
-      ? $(".erro").html("<h4 style='color:red'>Please Enter Your Name </h4>")
+      ? $(".erro").html("<h3 style='color:rgb(97, 2, 2)'>Please Enter Your Name </h3>")
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
-          "<img src='./player.png' style='width:50px;height:50px'>  <h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#ff0000, #fdcf58) text;'>PLAYER ONE (X)</h2>" +
+          "<img src='./player.png' style='width:50px;height:50px'>  <h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#111111a4, silver) text;'>PLAYER ONE (X)</h2>" +
             newplayer.val().toUpperCase(),
         ),
         $(".but2").removeAttr("disabled"));
@@ -26,13 +26,13 @@ $(document).ready(function () {
   $(".but2").click(function () {
     "" == newplayer2.val()
       ? $(".erro2").html(
-          "<h4 style='color:rgb(169, 12, 12)'>Please Enter Your Name </h4>",
+          "<h3 style='color:rgb(97, 2, 2)'>Please Enter Your Name </h3>",
         )
       : ($(".game2").slideUp(),
         $(".name2").addClass("pos2"),
         $(document.body).addClass("back"),
         $(".name2").html(
-          "<img src='./player.png' style='width:50px;height:50px'><h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#ff0000, #fdcf58) text;'>PLAYER TWO (O)</h2>" +
+          "<img src='./player.png' style='width:50px;height:50px'><h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to right,#111111a4, silver) text;'>PLAYER TWO (O)</h2>" +
             newplayer2.val().toUpperCase(),
         ),
         $("#play-now").slideDown(500),
@@ -75,9 +75,9 @@ let turn = "X",
 function end(e, s, a) {
   new Audio("./win.mp3").play();
   ((title.innerHTML = `<div class="winnerDiv"><h1 id="winner">The Winner<span class="winnerName">${win.innerHTML}</span></h1></div>`),
-    (document.getElementById("item" + e).style.color = "red"),
-    (document.getElementById("item" + s).style.color = "red"),
-    (document.getElementById("item" + a).style.color = "red"),
+    (document.getElementById("item" + e).style.color = "rgb(97, 2, 2)"),
+    (document.getElementById("item" + s).style.color = "rgb(97, 2, 2)"),
+    (document.getElementById("item" + a).style.color = "rgb(97, 2, 2)"),
     $("#p1").slideUp(),
     $("#p2").slideUp(),
     $("#p1").addClass("hidename"),
@@ -126,7 +126,7 @@ function gameid(e) {
     r = document.getElementById("play-now2");
   ("X" === turn && "" == s.innerHTML
     ? ((s.innerHTML = "X"),
-      (s.style.backgroundColor = "#111"),
+      (s.style.backgroundColor = "#d4d4d4"),
       (turn = "O"),
       (a.innerHTML = newplayer.val().toUpperCase()),
       (t.style.display = "none"),
@@ -134,7 +134,7 @@ function gameid(e) {
     : "O" === turn &&
       "" == s.innerHTML &&
       ((s.innerHTML = "O"),
-      (s.style.backgroundColor = "#111"),
+      (s.style.backgroundColor = "#d4d4d4"),
       (turn = "X"),
       (a.innerHTML = newplayer2.val().toUpperCase()),
       (r.style.display = "none"),
