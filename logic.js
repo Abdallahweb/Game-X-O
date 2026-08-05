@@ -15,7 +15,7 @@ $(document).ready(function () {
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
-          "<img src='./player.png' style='width:100px;height:110px;'>  <h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to bottom,rgba(190, 7, 7, 0.8),#777) text;'>PLAYER ONE (X)</h2>" +
+          "<img src='./player.png' style='width:100px;height:110px;'>  <h2 class='nameplayer1'>PLAYER ONE (X)</h2>" +
             newplayer.val().toUpperCase(),
         ),
         $(".but2").removeAttr("disabled"));
@@ -32,7 +32,7 @@ $(document).ready(function () {
         $(".name2").addClass("pos2"),
         $(document.body).addClass("back"),
         $(".name2").html(
-          "<img src='./player2.png' style='width:110px;height:110px'><h2 style='-webkit-text-fill-color: rgba(255, 255, 255, 0); background: linear-gradient(to bottom,rgb(27, 32, 139),#777) text;'>PLAYER TWO (O)</h2>" +
+          "<img src='./player2.png' style='width:110px;height:110px'><h2 class='nameplayer2'>PLAYER TWO (O)</h2>" +
             newplayer2.val().toUpperCase(),
         ),
         $("#play-now").slideDown(500),
@@ -127,6 +127,8 @@ function gameid(e) {
   ("X" === turn && "" == s.innerHTML
     ? ((s.innerHTML = "X"),
       (s.style.backgroundColor = "#d4d4d4"),
+            (s.style.color = "rgba(190, 7, 7, 0.8)"),
+
       (turn = "O"),
       (a.innerHTML = newplayer.val().toUpperCase()),
       (t.style.display = "none"),
@@ -135,6 +137,7 @@ function gameid(e) {
       "" == s.innerHTML &&
       ((s.innerHTML = "O"),
       (s.style.backgroundColor = "#d4d4d4"),
+      (s.style.color = "rgba(27, 32, 139, 0.8)"),
       (turn = "X"),
       (a.innerHTML = newplayer2.val().toUpperCase()),
       (r.style.display = "none"),
