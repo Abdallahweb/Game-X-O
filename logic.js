@@ -11,7 +11,7 @@ var newplayer = $("#playerone");
 $(document).ready(function () {
   $(".but").click(function () {
     "" == newplayer.val()
-      ? $(".erro").html("<h3 style='color:#111111cb'>Please Enter Your Name </h3>")
+      ? $(".erro").html("<h3 style='color:#0c0c0c'>Please Enter Your Name </h3>")
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
@@ -25,7 +25,7 @@ $(document).ready(function () {
   $(".but2").click(function () {
     "" == newplayer2.val()
       ? $(".erro2").html(
-          "<h3 style='color:#111111cb'>Please Enter Your Name </h3>",
+          "<h3 style='color:#0c0c0c'>Please Enter Your Name </h3>",
         )
       : ($(".game2").slideUp(),
         $(".name2").addClass("pos2"),
@@ -73,9 +73,9 @@ let turn = "X",
 function end(e, s, a) {
   new Audio("./win.mp3").play();
   ((title.innerHTML = `<div class="winnerDiv"><h1 id="winner">The Winner<span class="winnerName">${win.innerHTML}</span></h1></div>`),
-    (document.getElementById("item" + e).style.color = "#111111cb"),
-    (document.getElementById("item" + s).style.color = "#111111cb"),
-    (document.getElementById("item" + a).style.color = "#111111cb"),
+    (document.getElementById("item" + e).style.color = "#0c0c0c"),
+    (document.getElementById("item" + s).style.color = "#0c0c0c"),
+    (document.getElementById("item" + a).style.color = "#0c0c0c"),
     $("#p1").slideUp(),
     $("#p2").slideUp(),
     $("#p1").addClass("hidename"),
