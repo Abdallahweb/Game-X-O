@@ -80,11 +80,10 @@ function end(e, s, a) {
     $("#p2").slideUp(),
     $("#p1").addClass("hidename"),
     $("#p2").addClass("hidename2"),
-    setTimeout(function () {
-      location.reload();
-    }, 2e3));
+setTimeout(function () {
+    location.reload();
+}, 4000))
 }
-
 function winner() {
   for (let e = 1; e < 10; e++)
     squares[e] = document.getElementById("item" + e).innerHTML;
