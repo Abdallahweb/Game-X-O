@@ -11,7 +11,7 @@ var newplayer = $("#playerone");
 $(document).ready(function () {
   $(".but").click(function () {
     "" == newplayer.val()
-      ? $(".erro").html("<h3 style='color:#0c0c0c'>Please Enter Your Name </h3>")
+      ? $(".erro").html("<h3 style='color:#8a0606'>Please Enter Your Name </h3>")
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
@@ -25,7 +25,7 @@ $(document).ready(function () {
   $(".but2").click(function () {
     "" == newplayer2.val()
       ? $(".erro2").html(
-          "<h3 style='color:#0c0c0c'>Please Enter Your Name </h3>",
+          "<h3 style='color:#8a0606'>Please Enter Your Name </h3>",
         )
       : ($(".game2").slideUp(),
         $(".name2").addClass("pos2"),
