@@ -15,7 +15,7 @@ $(document).ready(function () {
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
-          `<img src='./player.jpg' style='margin:auto;width:170px;height:350px'>  <h2 class='nameplayer1'>${newplayer.val().toUpperCase()}</h2> <img src="./iconx.jpg" style="width:60px;height:60px">`
+          `<img src='./player.jpg' class="playerImg1" style='margin:auto;width:170px;height:350px'>  <h2 class='nameplayer1'>${newplayer.val().toUpperCase()}</h2> <img src="./iconx.jpg" style="width:60px;height:60px">`
         ),
         $(".but2").removeAttr("disabled"));
   });
@@ -119,8 +119,8 @@ function gameid(e) {
   new Audio("./click.mp3").play();
   let s = document.getElementById(e),
     a = document.getElementById("win"),
-    t = document.getElementById("play-now"),
-    r = document.getElementById("play-now2");
+    t = document.getElementsByClassName("nameplayer1"),
+    r = document.getElementsByClassName("nameplayer2");
   ("X" === turn && "" == s.innerHTML
     ? ((s.innerHTML = "X"),
       (s.style.backgroundColor = "#e0e0e0"),
@@ -128,8 +128,8 @@ function gameid(e) {
 
       (turn = "O"),
       (a.innerHTML = newplayer.val().toUpperCase()),
-      (t.style.display = "none"),
-      (r.style.display = "block"))
+      (t[0].classList.remove("shadow1")),
+      (r[0].classList.add("shadow2")))
     : "O" === turn &&
       "" == s.innerHTML &&
       ((s.innerHTML = "O"),
@@ -137,7 +137,7 @@ function gameid(e) {
       (s.style.color = "#051c6c"),
       (turn = "X"),
       (a.innerHTML = newplayer2.val().toUpperCase()),
-      (r.style.display = "none"),
-      (t.style.display = "block")),
+      (r[0].classList.remove("shadow2")),
+      (t[0].classList.add("shadow1"))),
     winner());
 }
