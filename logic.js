@@ -15,8 +15,7 @@ $(document).ready(function () {
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
-          "<img src='./player.png' style='width:100px;height:110px;'>  <h2 class='nameplayer1'>PLAYER ONE (X)</h2>" +
-            newplayer.val().toUpperCase(),
+          `<img src='./player.jpg' style='margin:auto;width:200px;height:400px'>  <h2 class='nameplayer1'>${newplayer.val().toUpperCase()} (X)</h2>`
         ),
         $(".but2").removeAttr("disabled"));
   });
@@ -32,8 +31,7 @@ $(document).ready(function () {
         $(".name2").addClass("pos2"),
         $(document.body).addClass("back"),
         $(".name2").html(
-          "<img src='./player2.png' style='width:110px;height:110px'><h2 class='nameplayer2'>PLAYER TWO (O)</h2>" +
-            newplayer2.val().toUpperCase(),
+          `<img src='./player2.png' style='margin:auto;width:200px;height:400px'>  <h2 class='nameplayer2'>${newplayer2.val().toUpperCase()} (O)</h2>`
         ),
         $("#play-now").slideDown(500),
         $("#x-o").slideDown(),
@@ -127,7 +125,7 @@ function gameid(e) {
   ("X" === turn && "" == s.innerHTML
     ? ((s.innerHTML = "X"),
       (s.style.backgroundColor = "#d4d4d4"),
-            (s.style.color = "rgba(190, 7, 7, 0.8)"),
+            (s.style.color = "rgba(131, 4, 4, 0.8)"),
 
       (turn = "O"),
       (a.innerHTML = newplayer.val().toUpperCase()),
