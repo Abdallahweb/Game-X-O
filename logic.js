@@ -15,7 +15,7 @@ $(document).ready(function () {
       : ($(".game").slideUp(),
         $(".name").addClass("pos1"),
         $(".name").html(
-          `<img src='./player.jpg' style='margin:auto;width:200px;height:400px'>  <h2 class='nameplayer1'>${newplayer.val().toUpperCase()} (X)</h2>`
+          `<img src='./player.jpg' style='margin:auto;width:170px;height:350px'>  <h2 class='nameplayer1'>${newplayer.val().toUpperCase()}</h2> <img src="./iconx.jpg" style="width:60px;height:60px">`
         ),
         $(".but2").removeAttr("disabled"));
   });
@@ -31,7 +31,7 @@ $(document).ready(function () {
         $(".name2").addClass("pos2"),
         $(document.body).addClass("back"),
         $(".name2").html(
-          `<img src='./player2.png' style='margin:auto;width:200px;height:400px'>  <h2 class='nameplayer2'>${newplayer2.val().toUpperCase()} (O)</h2>`
+          `<img src='./player2.png' style='margin:auto;width:150px;height:350px'><h2 class='nameplayer2'>${newplayer2.val().toUpperCase()}</h2> <img src="./icono.png" style="width:60px;height:60px">`
         ),
         $("#play-now").slideDown(500),
         $("#x-o").slideDown(),
@@ -125,7 +125,7 @@ function gameid(e) {
   ("X" === turn && "" == s.innerHTML
     ? ((s.innerHTML = "X"),
       (s.style.backgroundColor = "#d4d4d4"),
-            (s.style.color = "rgba(131, 4, 4, 0.8)"),
+            (s.style.color = "#8a0606"),
 
       (turn = "O"),
       (a.innerHTML = newplayer.val().toUpperCase()),
@@ -135,7 +135,7 @@ function gameid(e) {
       "" == s.innerHTML &&
       ((s.innerHTML = "O"),
       (s.style.backgroundColor = "#d4d4d4"),
-      (s.style.color = "rgba(27, 32, 139, 0.8)"),
+      (s.style.color = "#051c6c"),
       (turn = "X"),
       (a.innerHTML = newplayer2.val().toUpperCase()),
       (r.style.display = "none"),
