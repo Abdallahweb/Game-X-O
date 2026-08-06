@@ -123,7 +123,7 @@ function gameid(e) {
     r = document.getElementsByClassName("nameplayer2");
   ("X" === turn && "" == s.innerHTML
     ? ((s.innerHTML = "X"),
-      (s.style.backgroundColor = "#e0e0e0"),
+      (s.style.backgroundColor = "#e6e5e5"),
             (s.style.color = "#8a0606"),
 
       (turn = "O"),
@@ -133,7 +133,7 @@ function gameid(e) {
     : "O" === turn &&
       "" == s.innerHTML &&
       ((s.innerHTML = "O"),
-      (s.style.backgroundColor = "#e0e0e0"),
+      (s.style.backgroundColor = "#e6e5e5"),
       (s.style.color = "#051c6c"),
       (turn = "X"),
       (a.innerHTML = newplayer2.val().toUpperCase()),
